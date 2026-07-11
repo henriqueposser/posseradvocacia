@@ -115,6 +115,11 @@ p {
   color: #fff;
 }
 
+.btn-outline:hover {
+  background: var(--cream);
+  color: var(--erva-mate);
+}
+
 .btn-ink {
   background: var(--ink);
   color: var(--cream);
@@ -125,6 +130,11 @@ p {
   border-color: var(--erva-mate);
   margin-top: 60px;
   font-size: 18px;
+}
+
+.btn-outline-green:hover {
+  background: var(--erva-mate);
+  color: var(--paper);
 }
 
 .btn-line {
@@ -389,8 +399,10 @@ p {
   position: relative;
   border-radius: 50px;
   overflow: hidden;
-  padding: 100px;
+  padding: 120px 140px;
   isolation: isolate;
+  margin-left: -80px;
+  margin-right: -80px;
 }
 
 .areas-media {
@@ -488,9 +500,9 @@ p {
 }
 
 .radar-lead {
-  font-size: 32px;
-  line-height: 132%;
+  font-size: 18px !important;
   color: var(--dark);
+  max-width: none;
 }
 
 .radar-copy {
@@ -501,7 +513,7 @@ p {
   gap: 18px;
 }
 
-.radar-copy p {
+.radar-copy p:not(.radar-lead) {
   font-size: 15px;
   line-height: 1.6;
   color: var(--ink);
