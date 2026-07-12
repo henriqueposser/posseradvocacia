@@ -374,7 +374,6 @@ p {
   left: 20px;
   right: 20px;
   bottom: 20px;
-  background-color: var(--erva-mate);
   color: #fff;
   border-radius: 14px;
   padding: 14px 18px;
@@ -386,7 +385,7 @@ p {
 .pt-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 15px;
+  font-size: 22px;
 }
 
 .pt-oab {
