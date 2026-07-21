@@ -359,6 +359,7 @@ p {
 
 .qs-cta {
   grid-column: 1;
+  width: fit-content;
 }
 
 .qs-portrait {
