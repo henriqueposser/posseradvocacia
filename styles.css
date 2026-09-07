@@ -795,6 +795,7 @@ p {
 
   .hero {
     min-height: 55vh;
+    padding-top: 66px;
   }
 
   .hero-content {
@@ -805,8 +806,8 @@ p {
   }
 
   .hero-content img {
-    max-width: 80%;
-    width: 320px;
+    max-width: 88%;
+    width: 380px;
     margin: 0 auto;
   }
 
