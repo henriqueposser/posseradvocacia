@@ -41,7 +41,7 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--ink);
-  background: var(--cream);
+  background: var(--paper);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -243,12 +243,14 @@ p {
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
   width: 34px;
   height: 34px;
   background: none;
   border: none;
+  padding: 0;
   cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .nav-toggle span {
@@ -256,6 +258,10 @@ p {
   height: 2px;
   background: #fff;
   border-radius: 2px;
+}
+
+.nav-toggle span + span {
+  margin-top: 5px;
 }
 
 /* HERO */
@@ -676,6 +682,7 @@ p {
   }
 
   .site-header {
+    background: var(--paper);
     padding: 16px 0;
   }
 
@@ -705,13 +712,8 @@ p {
   }
 
   .nav-toggle span {
-    background: #FFFFFF;
-    transition: background 0.25s ease, transform 0.25s ease, opacity 0.2s ease;
-  }
-
-  .site-header.is-scrolled .nav-toggle span,
-  .site-header.menu-open .nav-toggle span {
     background: var(--erva-mate);
+    transition: background 0.25s ease, transform 0.25s ease, opacity 0.2s ease;
   }
 
   .nav-toggle.is-open span:nth-child(1) {
