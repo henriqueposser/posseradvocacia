@@ -241,7 +241,7 @@ p {
 
 .nav-toggle {
   display: none;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
   width: 34px;
   height: 34px;
@@ -253,15 +253,19 @@ p {
   appearance: none;
 }
 
-.nav-toggle span {
-  display: block;
-  height: 2px;
-  background: #fff;
-  border-radius: 2px;
+.nav-toggle-icon {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
 
-.nav-toggle span + span {
-  margin-top: 5px;
+.nav-toggle-bar {
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: stroke 0.25s ease, transform 0.25s ease, opacity 0.2s ease;
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
 /* HERO */
@@ -711,21 +715,20 @@ p {
     z-index: 50;
   }
 
-  .nav-toggle span {
-    background: var(--erva-mate);
-    transition: background 0.25s ease, transform 0.25s ease, opacity 0.2s ease;
+  .nav-toggle-bar {
+    stroke: var(--erva-mate);
   }
 
-  .nav-toggle.is-open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
   }
 
-  .nav-toggle.is-open span:nth-child(2) {
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(2) {
     opacity: 0;
   }
 
-  .nav-toggle.is-open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+  .nav-toggle.is-open .nav-toggle-bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .header-cta {
