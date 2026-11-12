@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://posseradvocacia.com.br/sitemap.xml
