@@ -31,10 +31,10 @@
         <a href="../#areas">Áreas de atuação</a>
         <a href="../radar/">Blog</a>
         <a href="../#contato">Contato</a>
-        <a href="https://wa.me/55996745903" target="_blank" class="nav-cta-mobile">Conversar com especialista</a>
+        <a href="https://wa.me/55996745903" target="_blank" class="nav-cta-mobile">Conversar com o advogado</a>
       </nav>
       <a href="https://wa.me/55996745903" target="_blank" class="btn btn-outline header-cta">
-        <span class="cta-label">Conversar com especialista</span>
+        <span class="cta-label">Conversar com o advogado</span>
         <span aria-hidden="true">→</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <svg class="nav-toggle-icon" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
@@ -441,6 +441,9 @@
       const f = b.dataset.filtro;
       document.querySelectorAll('.post-card').forEach(c => c.hidden = f !== 'todas' && c.dataset.area !== f);
     }));
+    const h = location.hash.slice(1);
+    const alvo = h && document.querySelector('.filtro[data-filtro="' + h + '"]');
+    if (alvo) alvo.click();
   </script>
 
   <footer class="site-footer">
@@ -452,7 +455,7 @@
         <p><a href="mailto:contato@henriqueposser.adv.br">contato@henriqueposser.adv.br</a></p>
         <p class="footer-oab">OAB/RS 117.583 · OAB/DF 88.780 (suplementar)</p>
         <a href="https://wa.me/55996745903" target="_blank" class="btn btn-outline footer-cta">
-          Conversar com especialista
+          Conversar com o advogado
           <span aria-hidden="true">→</span>
         </a>
       </div>

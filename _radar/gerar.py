@@ -98,10 +98,10 @@ def cabecalho(rel, titulo, descricao, url, imagem=None, tipo="website", extra_he
         <a href="{rel}#areas">Áreas de atuação</a>
         <a href="{rel}radar/">Blog</a>
         <a href="{rel}#contato">Contato</a>
-        <a href="{WHATS}" target="_blank" class="nav-cta-mobile">Conversar com especialista</a>
+        <a href="{WHATS}" target="_blank" class="nav-cta-mobile">Conversar com o advogado</a>
       </nav>
       <a href="{WHATS}" target="_blank" class="btn btn-outline header-cta">
-        <span class="cta-label">Conversar com especialista</span>
+        <span class="cta-label">Conversar com o advogado</span>
         <span aria-hidden="true">→</span></a>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
         <svg class="nav-toggle-icon" viewBox="0 0 34 34" aria-hidden="true" focusable="false">
@@ -127,7 +127,7 @@ def rodape(rel):
         <p><a href="mailto:contato@henriqueposser.adv.br">contato@henriqueposser.adv.br</a></p>
         <p class="footer-oab">OAB/RS 117.583 · OAB/DF 88.780 (suplementar)</p>
         <a href="{WHATS}" target="_blank" class="btn btn-outline footer-cta">
-          Conversar com especialista
+          Conversar com o advogado
           <span aria-hidden="true">→</span>
         </a>
       </div>
@@ -205,6 +205,9 @@ def pagina_indice(posts):
       const f = b.dataset.filtro;
       document.querySelectorAll('.post-card').forEach(c => c.hidden = f !== 'todas' && c.dataset.area !== f);
     }}));
+    const h = location.hash.slice(1);
+    const alvo = h && document.querySelector('.filtro[data-filtro="' + h + '"]');
+    if (alvo) alvo.click();
   </script>
 """
     h += rodape(rel)
@@ -249,7 +252,7 @@ def pagina_post(p, posts):
       <aside class="artigo-cta">
         <h2>Precisa de orientação nesse tema?</h2>
         <p>Cada caso tem detalhes que mudam a resposta. Converse comigo e entenda o caminho mais seguro para a sua situação.</p>
-        <a href="{WHATS}" target="_blank" class="btn btn-outline-dark">Conversar com especialista <span aria-hidden="true">→</span></a>
+        <a href="{WHATS}" target="_blank" class="btn btn-outline-dark">Conversar com o advogado <span aria-hidden="true">→</span></a>
       </aside>
     </article>
     <section class="wrap relacionados">
