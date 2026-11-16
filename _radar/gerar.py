@@ -121,10 +121,11 @@ def rodape(rel):
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <div class="footer-contact">
-        <p>Santa Maria, Rio Grande do Sul</p>
-        <p>Rua Paul Harris, 91, sala 16</p>
-        <p>Rio Grande do Sul</p>
+        <p>Rua Paul Harris, 109</p>
+        <p>Centro, Santa Maria/RS · CEP 97015-480</p>
         <p><a href="tel:+5555996745903">+55 (55) 99674-5903</a></p>
+        <p><a href="mailto:contato@henriqueposser.adv.br">contato@henriqueposser.adv.br</a></p>
+        <p class="footer-oab">OAB/RS 117.583 · OAB/DF 88.780 (suplementar)</p>
         <a href="{WHATS}" target="_blank" class="btn btn-outline footer-cta">
           Conversar com especialista
           <span aria-hidden="true">→</span>
@@ -217,8 +218,9 @@ def pagina_post(p, posts):
         "@context": "https://schema.org", "@type": "BlogPosting", "headline": p["titulo"],
         "description": p["resumo"], "datePublished": p["data"], "dateModified": p.get("atualizado") or p["data"],
         "image": f"{DOMINIO}/radar/img/{p['capa']}" if p.get("capa") else None, "mainEntityOfPage": url,
-        "author": {"@type": "Person", "name": "Henrique Posser Martins", "url": DOMINIO + "/"},
-        "publisher": {"@type": "LegalService", "name": "POSSER Advocacia", "url": DOMINIO + "/"},
+        "author": {"@type": "Person", "@id": DOMINIO + "/#henrique", "name": "Henrique Posser Martins", "url": DOMINIO + "/"},
+        "publisher": {"@type": "LegalService", "@id": DOMINIO + "/#escritorio", "name": "POSSER Advocacia", "url": DOMINIO + "/",
+                      "logo": DOMINIO + "/icons/favicon.svg"},
     }
     extra = f'  <meta property="article:published_time" content="{p["data"]}">\n  <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>\n'
     h = cabecalho(rel, f"{p['titulo']} · Radar jurídico", p["resumo"], url, p.get("capa"), "article", extra)
