@@ -141,6 +141,9 @@ def rodape(rel):
     </div>
     <div class="wrap footer-bottom">
       <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/henriquemartins-adv/" aria-label="LinkedIn" target="_blank">
+          <img src="{rel}icons/linkedin.svg" alt="LinkedIn">
+        </a>
         <a href="https://www.instagram.com/henriqueposseradv/" aria-label="Instagram" target="_blank">
           <img src="{rel}icons/instagram.svg" alt="Instagram">
         </a>
@@ -218,7 +221,8 @@ def pagina_post(p, posts):
         "@context": "https://schema.org", "@type": "BlogPosting", "headline": p["titulo"],
         "description": p["resumo"], "datePublished": p["data"], "dateModified": p.get("atualizado") or p["data"],
         "image": f"{DOMINIO}/radar/img/{p['capa']}" if p.get("capa") else None, "mainEntityOfPage": url,
-        "author": {"@type": "Person", "@id": DOMINIO + "/#henrique", "name": "Henrique Posser Martins", "url": DOMINIO + "/"},
+        "author": {"@type": "Person", "@id": DOMINIO + "/#henrique", "name": "Henrique Posser Martins", "url": DOMINIO + "/",
+                   "sameAs": ["https://www.linkedin.com/in/henriquemartins-adv/"]},
         "publisher": {"@type": "LegalService", "@id": DOMINIO + "/#escritorio", "name": "POSSER Advocacia", "url": DOMINIO + "/",
                       "logo": DOMINIO + "/icons/favicon.svg"},
     }
