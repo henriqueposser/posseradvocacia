@@ -1194,3 +1194,16 @@ p {
   .florestal-titulo, .faq-titulo { font-size: 34px; }
   .faq-lista summary { font-size: 21px; }
 }
+
+/* Foto do Quem somos (chimarrão, 2026-11-17): sombra no pé pra legenda */
+@media (min-width: 721px) {
+  .portrait-media { position: relative; }
+  .portrait-media::after {
+    content: "";
+    position: absolute;
+    inset: 55% 0 0 0;
+    background: linear-gradient(180deg, rgba(22, 40, 27, 0) 0%, rgba(22, 40, 27, 0.75) 100%);
+    pointer-events: none;
+  }
+  .portrait-tag { z-index: 1; }
+}
